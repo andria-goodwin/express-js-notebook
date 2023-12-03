@@ -1,12 +1,26 @@
-// const express = require('express');
+const apiRouter = require('express').Router();
+const path = require('path');
+const fs = require('fs');
+let uniqid = require('uniqid');
 
-// // Import our modular routers for /html and /api
-// const htmlRouter = require('./htmlRoutes.js');
-// // const apiRouter = require('./apiRoutes.js');
+apiRouter.get('/api/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, '../db/db.json'));
+});
 
-// const app = express();
+apiRouter.post('/api/notes', (req, res) => {
+    let db = fs.readFileSync('db/db.json');
+    db = JSON.parse(db);
+    res.json(db);
 
-// app.use(htmlRouter);
-// // app.use('/api', apiRouter);
+    let userNote = {
+      title: req.body.title,
+      text: req.body.text,
+      id: uniqid(),
+    };
 
-// module.exports = app;
+    db.push(userNote);
+    fs.writeFileSync('db/db.json', JSON.stringify(db));
+    res.json(db);
+});
+
+module.exports = apiRouter;

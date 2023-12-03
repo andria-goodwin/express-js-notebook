@@ -2,6 +2,7 @@ const express = require('express');
 const routes = require('./routes/apiRoutes.js');
 
 const htmlRouter = require('./routes/htmlRoutes.js');
+const apiRouter = require('./routes/apiRoutes.js');
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.use(htmlRouter);
+app.use(apiRouter);
 
 // app listener
 app.listen(PORT, () => {
