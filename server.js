@@ -15,6 +15,7 @@ app.use(express.static('public'));
 
 app.use(htmlRouter);
 app.use(apiRouter);
+// require('./routes/apiRoutes.js')(app);
 
 // app listener
 app.listen(PORT, () => {
