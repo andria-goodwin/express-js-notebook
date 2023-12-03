@@ -1,7 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
-  
+[{"title":"Test Title","text":"Test text"},{"title":"Grocery List","text":"Bananas\nBread\nEggs\nMilk","id":"hkck8lpoo03aa"},{"title":"My note","text":"I am typing this note as a test","id":"hkfaklpoomjws"}]
