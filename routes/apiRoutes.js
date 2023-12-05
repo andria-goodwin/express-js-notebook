@@ -4,6 +4,7 @@ const fs = require('fs');
 let uniqid = require('uniqid');
 
 apiRouter.get('/notes', (req, res) => {
+    console.log('get notes accessed')
     res.sendFile(path.join(__dirname, '../db/db.json'));
 });
 
