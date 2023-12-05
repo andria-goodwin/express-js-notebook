@@ -17,7 +17,7 @@ As a small business owner, I want to be able to write and save notes, so that I 
 ## Installation
 No installation is required, simply go to the following link to use the notebook:
 
-[link here]
+https://express-js-notebook-4158ef7c87d6.herokuapp.com/
 
 ## Usage
 The Express.js Notebook opens up on a landing page. From the landing page you can proceed to the notes page by clicking "Get Started".
